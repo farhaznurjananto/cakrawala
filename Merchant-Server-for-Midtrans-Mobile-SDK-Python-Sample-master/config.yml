@@ -1,0 +1,6 @@
+sandbox_server_key: sandbox-server-key
+production_server_key: prod-server-key
+sandbox_url: https://app.sandbox.midtrans.com/snap/v1/transactions
+production_url: https://app.midtrans.com/snap/v1/transactions
+is_production: false
+app_port: 5000
