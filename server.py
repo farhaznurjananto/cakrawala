@@ -15,13 +15,8 @@ CORS(app)
 # Train the model
 # model = train_model(data, target)
 
-config = {
-    "sandbox_server_key": "SB-Mid-server-EH1pOSzfaH-4HH2iZWeQ1tmo",
-    "production_server_key": "prod-server-key",
-    "sandbox_url": "https://app.sandbox.midtrans.com/snap/v1/transactions",
-    "production_url": "https://app.midtrans.com/snap/v1/transactions",
-    "is_production": False,
-}
+with open("config.yml", 'r') as ymlfile:
+    config = yaml.load(ymlfile)
 
 @app.route('/charge', methods=['post'])
 def index():
