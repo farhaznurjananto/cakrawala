@@ -3,6 +3,7 @@ from model import predict
 from flask_cors import CORS
 import json
 import requests
+import yaml
 # from model_ml import train_model, predict
 
 app = Flask(__name__)
@@ -16,7 +17,7 @@ CORS(app)
 # model = train_model(data, target)
 
 with open("config.yml", 'r') as ymlfile:
-    config = yaml.load(ymlfile)
+    config = yaml.load(ymlfile, Loader=yaml.FullLoader)
 
 @app.route('/charge', methods=['post'])
 def index():
