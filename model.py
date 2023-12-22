@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential, load_model
-from tensorflow.keras.layers import Dense, Embedding, GlobalAveragePooling1D  # Update TensorFlow imports
+from tensorflow.keras.layers import Dense, Embedding, GlobalAveragePooling1D
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def predict(inputData):
@@ -21,12 +21,12 @@ def predict(inputData):
 
     data, labels = load_data('dataset_cakrawala')
 
-    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=10000)  # Adjust num_words as needed
+    tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=10000)
     tokenizer.fit_on_texts(data)
     sequences = tokenizer.texts_to_sequences(data)
 
     tfidf = TfidfVectorizer(ngram_range=(1, 2), min_df=5, max_df=0.7)
-    X = tfidf.fit_transform(data).toarray()  # Convert to numpy array
+    X = tfidf.fit_transform(data).toarray()
 
     user_input = inputData
 
