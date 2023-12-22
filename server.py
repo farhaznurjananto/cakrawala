@@ -4,17 +4,9 @@ from flask_cors import CORS
 import json
 import requests
 import yaml
-# from model_ml import train_model, predict
 
 app = Flask(__name__)
 CORS(app)
-
-# Dummy data
-# data = [[1], [2], [3]]
-# target = [2, 4, 6]
-
-# Train the model
-# model = train_model(data, target)
 
 with open("config.yml", 'r') as ymlfile:
     config = yaml.load(ymlfile, Loader=yaml.FullLoader)
@@ -42,8 +34,6 @@ def chargeAPI(body):
 def hello():
 
     try:
-        # print(type(input_data))
-        # return request.json['data']
         input_data = request.json['data']
         prediction = predict(input_data)
         return jsonify({'prediction': prediction})
