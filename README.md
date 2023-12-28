@@ -1,7 +1,7 @@
 ## Team Member:
 
 * Amsar Azmi Zailani.H - m009bsy1180@bangkit.academy
-* Reinato Teguh Santoso - m536bsy0638@bangkit.academy
+* Awaludin Taufik Nurrohman - m536bsy0638@bangkit.academy
 
 ## Machine Learning team is responsible to :
 * Collect data and cleansing the data
